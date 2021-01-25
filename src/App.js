@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Subject from './Components/Subject'; 
+import Nav from './Components/Nav';
+import Content from './Components/Content';
 
 function App() {
+  const [ title ] = useState('WHYRANO');
+  const [ sub ] = useState('Amazing props!');
+  const [ contents ] = useState([
+    { id: 1, title: 'HTML', desc: 'HTML is HTML.'},
+    { id: 2, title: 'CSS', desc: 'CSS is CSS.'},
+    { id: 3, title: 'JS', desc: 'JS is JS.'}
+  ]);
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Subject title={ title } sub={ sub }/>
+      <Nav data={ contents }/>
+      <Content title={ contents[0].title } desc={ contents[0].desc }/>
     </div>
   );
 }
-
 export default App;
