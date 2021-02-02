@@ -7,7 +7,7 @@ function Nav(props){
   var i = 0;
   while( i < data.length ){
     lists.push(
-      <li key={ data[i].id }>
+      <li key={ i }>
       <a 
         href={ "/content/" + data[i].id }
         data-id={data[i].id}

@@ -1,0 +1,13 @@
+#head{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+#title{
+  text-decoration: none;
+  color : white;
+  font-size: 60px;
+  letter-spacing: 5px;
+}

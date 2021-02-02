@@ -14,7 +14,7 @@ function Control(props){
       }}>UPDATE</a></li>
       <li><input onClick={function(e){
         e.preventDefault();
-        props.onChangMode('delete')
+        props.onChangeMode('delete')
       }} type="button" value="DELETE"></input></li>
     </ul>
   );

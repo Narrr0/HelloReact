@@ -1,9 +1,10 @@
 import React from 'react';
+import './Subject.css';
 
 function Subject(props){
   return(
-    <div>
-      <h1><a href="/" onClick={function(e){
+    <div id="head">
+      <h1><a id="title" href="/" onClick={function(e){
         e.preventDefault();
         props.onChangePage();
       }}>{ props.title }</a></h1>

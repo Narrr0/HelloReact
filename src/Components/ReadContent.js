@@ -1,10 +1,11 @@
 import React from 'react';
+import './ReadContent.css';
 
 function ReadContent(props){
   return(
     <article>
-      <h2>{ props.title }</h2>
-      { props.desc }
+      <div id="subject">{ props.title }</div>
+      <div id="desc">{ props.desc }</div>
     </article>
   )
 }

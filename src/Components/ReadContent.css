@@ -1,0 +1,13 @@
+article{
+  text-align: center;
+  position: fixed;
+  top: 40%;
+  width: 100%;
+  font-size:120px;
+  color: white;
+}
+
+
+#desc{
+  font-size: 30px;
+}
