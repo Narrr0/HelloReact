@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './inputForm.css';
 
 function UpdateContent(props){
   const [id] = useState(props.data.id);
@@ -14,8 +15,7 @@ function UpdateContent(props){
     }
   }
   return(
-    <div>
-      <h2>Update</h2>
+    <div id="inputForm">
       <form action="/update_process" method="post"
         onSubmit={function(e){
           e.preventDefault();
@@ -28,19 +28,19 @@ function UpdateContent(props){
       >
       <input type="hidden" name="id" value={id}></input>
         <p>
-          <input type="text" name="title" 
-          placeholder="제목을 입력하세요"
+          <input class="input" id="inputTitle" type="text" name="title" 
+          placeholder="title"
           value={title}
           onChange={(e)=>inputFormHandler(e)}></input>
         </p>
         <p>
-          <textarea name="desc"
-          placeholder="내용을 입력하세요"
+          <textarea class="input" id="inputContent" name="desc"
+          placeholder="content"
           value={desc}
           onChange={(e)=>inputFormHandler(e)}></textarea>
         </p>
         <p>
-          <input type="submit"></input>
+          <input id="submitBtn" type="submit" value="udpate"></input>
         </p>
       </form>
     </div>

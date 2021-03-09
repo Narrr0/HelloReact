@@ -1,0 +1,49 @@
+form{
+  text-align: center;
+}
+
+#inputForm{
+  display: flex;
+  justify-content: center;
+  margin-top: 6%;
+}
+
+#submitBtn{
+  width: 80px;
+  color: white;
+  background-color: darkslateblue;
+  font-family: Londrina Solid;
+  font-size: 1.2rem;
+  padding: 7px;
+  margin: 5px;
+  border: 2px solid darkslateblue;
+  border-radius: 0.7rem;
+}
+
+#submitBtn:hover{
+  color : darkslateblue;
+  background-color: white;
+  border: 2px solid white;
+}
+
+.input{
+  background-color: transparent;
+  color: white;
+  width: 500px;
+  font-family: Londrina Solid;
+  border: none;
+  text-align: center;
+  margin: -10px;
+}
+
+.input:focus{
+  outline: none;
+}
+
+#inputTitle{
+  font-size: 120px;
+}
+
+#inputContent{
+  font-size: 30px;
+}

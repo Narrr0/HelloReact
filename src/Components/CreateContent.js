@@ -1,9 +1,9 @@
 import React from 'react';
+import './inputForm.css';
 
 function CreateContent(props){
   return(
-    <div>
-      <h2>Create</h2>
+    <div id="inputForm">
       <form action="/create_process" method="post"
         onSubmit={function(e){
           e.preventDefault();
@@ -13,14 +13,14 @@ function CreateContent(props){
           );
         }}
       >
-        <p><input type="text" name="title" 
-        placeholder="제목을 입력하세요"></input></p>
+        <p><input class="input" id="inputTitle" type="text" name="title" 
+        placeholder="title"></input></p>
         <p>
-          <textarea name="desc"
-          placeholder="내용을 입력하세요"></textarea>
+          <textarea class="input" id="inputContent" name="desc"
+          placeholder="content"></textarea>
         </p>
         <p>
-          <input type="submit"></input>
+          <input id="submitBtn" type="submit" value="create"></input>
         </p>
       </form>
     </div>

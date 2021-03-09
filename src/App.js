@@ -33,13 +33,31 @@ function App() {
     else if(mode === 'read'){
       _title = contents[selectedId].title;
       _desc = contents[selectedId].desc;
-      _article = <ReadContent title={ _title } desc={ _desc }/>
+      _article = <div>
+          <ReadContent title={ _title } desc={ _desc } />
+          <Control 
+            onChangeMode={function(_mode){
+              if(_mode === 'delete'){
+                console.log(_mode);
+                if(window.confirm('삭제하시겠습니까?')){
+                  var _contents = Array.from(contents);
+                  _contents.splice(selectedId, 1);
+                  setContents(_contents);
+                  setMode('welcome');
+                }
+              }
+              else{
+                setMode(_mode);
+          }}}/>
+        </div>
     }
     else if (mode === 'create'){
       _article = <CreateContent onSubmit={function(_title, _desc){
         const new_content = {id: lastId + 1, title: _title, desc: _desc};
         setlastId(id => id = id + 1);
         setContents([...contents, new_content]);
+        setSelectedId(new_content.id);
+        setMode('read');
       }}></CreateContent>
     }
     else if(mode === 'update'){
@@ -69,26 +87,13 @@ function App() {
           setMode('read');  
           setSelectedId(Number(id));
         }}
+        onChangeMode={function(_mode){
+          setMode(_mode);
+        }}
         data={ contents }
       />
 
-      <Control 
-        onChangeMode={function(_mode){
-          if(_mode === 'delete'){
-            console.log(_mode);
-            if(window.confirm('삭제하시겠습니까?')){
-              var _contents = Array.from(contents);
-              _contents.splice(selectedId, 1);
-              setContents(_contents);
-              setMode('welcome');
-            }
-          }
-          else{
-            setMode(_mode);
-          }
-        }}
-      />
-    {getContent()}
+      <div> {getContent()} </div>
     </div>
   );
 }

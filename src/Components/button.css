@@ -1,0 +1,26 @@
+button{
+  width: 80px;
+  color: white;
+  background-color: darkslateblue;
+  font-family: Londrina Solid;
+  font-size: 1.2rem;
+  padding: 7px;
+  margin: 5px;
+  border: 2px solid darkslateblue;
+  border-radius: 0.7rem;
+}
+
+button:hover{
+  color : darkslateblue;
+  background-color: white;
+  border: 2px solid white;
+}
+
+button:focus{
+  outline: none;
+  border: 3px solid white;
+}
+
+#addBtn{
+  width: 40px;
+}

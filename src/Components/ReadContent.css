@@ -3,10 +3,10 @@ article{
   position: fixed;
   top: 40%;
   width: 100%;
+  margin-left: -4px;
   font-size:120px;
   color: white;
 }
-
 
 #desc{
   font-size: 30px;
